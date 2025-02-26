@@ -172,6 +172,7 @@ void fmt_class_string<cheat_type>::format(std::string &out, u64 arg) {
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_net_rpcs3_MainActivity_stringFromJNI(JNIEnv *env, jobject /* this */) {
+  Emu.Init();
   Emu.AddGame("test");
 
   EmuCallbacks cb{
