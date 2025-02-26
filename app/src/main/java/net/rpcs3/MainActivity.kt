@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
     external fun stringFromJNI(): String
 
     companion object {
-        // Used to load the 'rpcs3' library on application startup.
+        // Used to load the 'rpcs3-android' library on application startup.
         init {
-            System.loadLibrary("rpcs3")
+            System.loadLibrary("rpcs3-android")
         }
     }
 }
