@@ -18,14 +18,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(openGl) // Ставит вместо активити или фрагмента SurfaceView
         //setContentView(binding.root)
         // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        //binding.sampleText.text = stringFromJNI()
     }
 
     /**
      * A native method that is implemented by the 'rpcs3' native library,
      * which is packaged with this application.
      */
-    external fun stringFromJNI(): String
+    //external fun stringFromJNI(): String
 
     companion object {
         // Used to load the 'rpcs3-android' library on application startup.
