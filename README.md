@@ -6,7 +6,7 @@ Fork of the official RPCS3 Android port. Right now the project is in a very earl
 
 # TODO
 
-- [ ] Fix crash on startup
+- [ ] Fix crash on startup (native-lib.cpp)
 - [ ] Implement and test OpenGL
 
 # License
