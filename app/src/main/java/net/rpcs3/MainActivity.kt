@@ -1,9 +1,9 @@
 package net.rpcs3
 
+import android.content.Intent
 import android.opengl.GLSurfaceView
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.TextView
+import android.os.Bundle
 import net.rpcs3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,8 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         openGl = glView(this)
-        setContentView(openGl) // Set instead of activity or SurfaceView
-        // setContentView(binding.root)
+        // setContentView(openGl) Set instead of activity or SurfaceView
+        setContentView(binding.root)
+        binding.fabLogs.setOnClickListener {
+            val intent = Intent(this, LogsActivity::class.java)
+            startActivity(intent)
+        }
         // Example of a call to a native method
         // binding.sampleText.text = stringFromJNI()
     }
@@ -27,10 +31,10 @@ class MainActivity : AppCompatActivity() {
      */
     // external fun stringFromJNI(): String
 
-    /* companion object {
+    companion object {
         // Used to load the 'rpcs3-android' library on application startup.
         init {
             System.loadLibrary("rpcs3-android")
         }
-    } */
+    }
 }
