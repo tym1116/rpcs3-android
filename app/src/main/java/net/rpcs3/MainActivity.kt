@@ -15,22 +15,22 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         openGl = glView(this)
-        setContentView(openGl) // Ставит вместо активити или фрагмента SurfaceView
-        //setContentView(binding.root)
+        setContentView(openGl) // Set instead of activity or SurfaceView
+        // setContentView(binding.root)
         // Example of a call to a native method
-        //binding.sampleText.text = stringFromJNI()
+        // binding.sampleText.text = stringFromJNI()
     }
 
     /**
      * A native method that is implemented by the 'rpcs3' native library,
      * which is packaged with this application.
      */
-    //external fun stringFromJNI(): String
+    // external fun stringFromJNI(): String
 
-    companion object {
+    /* companion object {
         // Used to load the 'rpcs3-android' library on application startup.
         init {
             System.loadLibrary("rpcs3-android")
         }
-    }
+    } */
 }
