@@ -6,14 +6,14 @@ import javax.microedition.khronos.opengles.GL10
 
 class glRenderer : GLSurfaceView.Renderer {
     override fun onSurfaceCreated(p0: GL10?, p1: EGLConfig?) {
-        TODO("Not yet implemented")
+        GLES30.glClearColor(0.0f,0.0f,0.0f,1.0f);
     }
 
     override fun onSurfaceChanged(p0: GL10?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+        GLES30.glClear(GLES30.GL_COLOR_BUFFER_BIT);
     }
 
     override fun onDrawFrame(p0: GL10?) {
-        TODO("Not yet implemented")
+        
     }
 }
