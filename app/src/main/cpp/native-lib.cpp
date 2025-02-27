@@ -118,7 +118,7 @@ void jit_announce(uptr, usz, std::string_view);
   utils::output_stderr(fmt::format("RPCS3: %s\n", text));
 
   jit_announce(0, 0, "");
-  std::ofstream log_file("/data/data/net.rpcs3/files/rpcs3_logs.txt", std::ios::app);
+  std::ofstream log_file("/sdcard/RPCS3/rpcs3_logs.txt", std::ios::app);
     if (log_file) {
         log_file << buf << "\n\n";
     }
