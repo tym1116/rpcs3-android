@@ -1,5 +1,7 @@
 package net.rpcs3
 
+import android.opengl.GLES20
+import android.opengl.GLES30
 import android.opengl.GLSurfaceView
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
