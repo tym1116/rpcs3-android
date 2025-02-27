@@ -29,7 +29,7 @@ class LogsActivity : AppCompatActivity() {
 
     private fun loadLogs(textView: TextView) {
         try {
-            val logFile = File(filesDir, "rpcs3_logs.txt")
+            val logFile = File("/sdcard/RPCS3/rpcs3_logs.txt")
             if (logFile.exists()) {
                 textView.text = logFile.readText()
             } else {
