@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        openGl = glView(this)
         setContentView(openGl) // Ставит вместо активити или фрагмента SurfaceView
         //setContentView(binding.root)
         // Example of a call to a native method
