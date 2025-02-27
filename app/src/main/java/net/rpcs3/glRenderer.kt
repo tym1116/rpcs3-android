@@ -12,7 +12,7 @@ class glRenderer : GLSurfaceView.Renderer {
     }
 
     override fun onSurfaceChanged(p0: GL10?, w: Int, h: Int) {
-        GLES20.glViewport(0, 0, width, height)
+        GLES20.glViewport(0, 0, w, h)
     }
 
     override fun onDrawFrame(p0: GL10?) {
