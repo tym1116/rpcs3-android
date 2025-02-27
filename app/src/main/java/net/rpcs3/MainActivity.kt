@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         if (!Environment.isExternalStorageManager()) {
             requestStoragePermission()
         } else {
-            initializeApp()
+            appInit()
         }
     }
 
