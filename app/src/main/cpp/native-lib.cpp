@@ -20,6 +20,7 @@
 
 #include <jni.h>
 #include <string>
+#include <fstream>
 
 std::string g_input_config_override;
 cfg_input_configurations g_cfg_input_configs;
@@ -117,7 +118,11 @@ void jit_announce(uptr, usz, std::string_view);
   utils::output_stderr(fmt::format("RPCS3: %s\n", text));
 
   jit_announce(0, 0, "");
-  std::abort();
+  std::ofstream log_file("/data/data/net.rpcs3/files/rpcs3_logs.txt", std::ios::app);
+    if (log_file) {
+        log_file << buf << "\n\n";
+    }
+  // std::abort();
 }
 
 void disable_display_sleep()
