@@ -4,7 +4,7 @@
 
 Fork of the official RPCS3 Android port. Right now the project is in a very early stage. At this moment I just wanna see if it works. Any PRs are welcome.
 
-## License
+# License
 
 This project is licensed under the same terms as the official RPCS3. See [LICENSE](LICENSE) for details.
 
