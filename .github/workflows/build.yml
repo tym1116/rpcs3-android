@@ -1,0 +1,37 @@
+name: Build RPCS3
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+        with:
+          submodules: recursive
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3.2.2
+
+      - name: Setup Java
+        uses: actions/setup-java@v4.7.0
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Grant Execute Permission for Gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build Unsigned APK
+        uses: gradle/gradle-build-action@v3
+        with:
+          arguments: assembleRelease
+
+      - name: Upload Unsigned APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: RPCS3-Unsigned-APK
+          path: app/build/outputs/apk/release/*.apk
