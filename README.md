@@ -4,6 +4,9 @@
 
 Fork of the official RPCS3 Android port. Right now the project is in a very early stage. At this moment I just wanna see if it works. Any PRs are welcome.
 
+> [!WARNING]
+> Most of the code that I (Alexoqool) add was written in the 2024 Q3/Q4, so it might be unclear or messy and most likely will be rewritten in future.
+
 # TODO
 
 - [ ] Fix crash on startup (native-lib.cpp)
